@@ -15,7 +15,7 @@
         <div class="mockup-phone border-primary">
             <div class="camera"></div>
             <div class="display">
-                <div class="artboard artboard-demo phone-3">
+                <div class="artboard artboard-demo phone-3 px-3">
                     <!-- user total ballance  -->
                     <div class="stats shadow">
                         <div class="stat">
@@ -25,9 +25,18 @@
                     <div class="divider"></div>
 
                     <!-- user btn  -->
-                    <div>
+                    <div class=" grid grid-cols-3 gap-2 ">
                         <button id="btn-add-money" class="btn btn-lg">Add Money</button>
+
                         <button id="btn-cash-out" class="btn btn-lg">Cash Out</button>
+
+                        <button id="btn-transfer-money" class="btn btn-lg">Transfer Money</button>
+
+                        <button id="btn-get-bonus" class="btn btn-lg">Get Bonus</button>
+
+                        <button id="btn-pay-bill" class="btn btn-lg">Pay Bill</button>
+
+                        <button id="btn-transaction" class="btn btn-lg">Transaction</button>
                     </div>
                     <div class="divider"></div>
                     <!-- add money card start -->
@@ -37,14 +46,15 @@
                                 <label class="label">
                                     <span class="label-text">Amount to Add</span>
                                 </label>
-                                <input id="add-money-number" type="text" placeholder="Add Amount" class="input input-bordered" required />
+                                <input id="add-money-number" type="text" placeholder="Add Amount"
+                                    class="input input-bordered" required />
                             </div>
                             <div class="form-control">
                                 <label class="label">
                                     <span class="label-text">Pin Number</span>
                                 </label>
-                                <input type="password"   id="add-money-pin" placeholder="Enter 4 Digit Pin" class="input input-bordered"
-                                    autocomplete="off" required />
+                                <input type="password" id="add-money-pin" placeholder="Enter 4 Digit Pin"
+                                    class="input input-bordered" autocomplete="off" required />
                             </div>
                             <div class="form-control mt-6">
                                 <button id="add-money-btn" class="btn btn-primary">Add Money</button>
@@ -56,34 +66,151 @@
                     <!-- cash out card start  -->
                     <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Cash Out</span>
+                                </label>
+                                <input id="cash-out-amount" type="text" placeholder="Enter Amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin Number</span>
+                                </label>
+                                <input id="cash-out-pin" type="password" placeholder="Enter 4 Digit Pin"
+                                    class="input input-bordered" autocomplete="off" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="cash-out-btn" class="btn btn-primary">Cash out</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- cash out card end -->
+
+
+
+                    <!-- transfer Money card start here -->
+
+                    <div id="transfer-Amount-form" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Transfer Ballance</span>
+                                </label>
+                                <input id="transfer-balance" type="text" placeholder="Enter Amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin Number</span>
+                                </label>
+                                <input id="transfer-pin" type="password" placeholder="Enter Your Pin Number"
+                                    class="input input-bordered" autocomplete="off" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="btn-transfer" class="btn btn-primary">Transfer Ballance</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- transfer Money card start here -->
+
+                    <!-- get bonus card start -->
+
+                    <div id="get-bonus-card" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Enter Your Code</span>
+                                </label>
+                                <input id="coopon-code" type="text" placeholder="Enter Your Coopon Code" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin Number</span>
+                                </label>
+                                <input id="bonus-pin" type="password" placeholder="Enter Your Pin Number" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="get-bonus-btn" class="btn btn-primary">Get Bonus</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- get bonus card End -->
+
+                    <!-- pay Bill card start -->
+
+                    <div id="pay-bill-card" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
                           <div class="form-control">
                             <label class="label">
-                              <span class="label-text">Cash Out</span>
+                              <span class="label-text">Bill Number</span>
                             </label>
-                            <input id="cash-out-amount" type="text" placeholder="Add Amount" class="input input-bordered" required />
+                            <input id="biller-id" type="email" placeholder="Enter Bill Number here" class="input input-bordered" required />
                           </div>
                           <div class="form-control">
                             <label class="label">
-                              <span class="label-text">Pin Number</span>
+                              <span class="label-text">Enter User Id</span>
                             </label>
-                            <input id="cash-out-pin" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered" autocomplete="off" required />
+                            <input id="user-id" type="Text" placeholder="Enter user Id here" class="input input-bordered" required />
                           </div>
                           <div class="form-control mt-6">
-                            <button id="cash-out-btn" class="btn btn-primary">Cash out</button>
+                            <button id="Pay-bill-btn" class="btn btn-primary">Pay Bill</button>
                           </div>
                         </form>
                       </div>
+                      <!-- paybil amount and pin card -->
+                      <div id="bill-amount-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Enter Your Bill Amount</span>
+                                </label>
+                                <input id="bill-amount" type="text" placeholder="Enter Your Bill Amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin Number</span>
+                                </label>
+                                <input id="bill-pin" type="password" placeholder="Enter Your Pin"
+                                    class="input input-bordered" autocomplete="off" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="bill-confirm-btn" class="btn btn-primary">Confirm</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- pay Bill card end -->
+
+
+
 
                 </div>
             </div>
         </div>
     </main>
 
+
+
+
+    <!-- common id selection  -->
+    <script src="./js/common.js"></script>
     <script src="./js/add-money.js"></script>
     <!-- cash out -->
     <script src="./js/cash-out.js"></script>
     <!-- features -->
-     <script src="./js/feateres.js"></script>
+    <script src="./js/feateres.js"></script>
+    <!-- transfer Ballance -->
+    <script src="./js/transferMoney.js"></script>
+    <!-- get bonus  -->
+    <script src="./js/get-bonus.js "></script>
+    <!-- pay bill -->
+    <script src="./js/paybil.js"></script>
+
+
+
 </body>
 
 </html>
